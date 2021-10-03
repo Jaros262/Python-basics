@@ -6,14 +6,14 @@ V Pythonu jsou konstanty obvykle deklarovány a přiřazovány v modulu, který 
 Konstanty jsou pojmenovány velkými písmeny a jednotlivá slova jsou oddělována podtržítky.
 '''
 
-EARTH_GRAVITY = 0 #? normální pozemské tíhové zrychlení
-MOON_GRAVITY = 0 #? měsíční gravitace
-SPEED_OF_LIGHT = 0 #? rychlost světla ve vakuu
-SPEED_OF_SOUND = 0 #? rychlost zvuku při teplotě 20 °C v suchém vzduchu
+EARTH_GRAVITY = 9.80665 #? normální pozemské tíhové zrychlení
+MOON_GRAVITY = 1.625 #? měsíční gravitace
+SPEED_OF_LIGHT = 299792458 #? rychlost světla ve vakuu
+SPEED_OF_SOUND = 343 #? rychlost zvuku při teplotě 20 °C v suchém vzduchu
 
 ''' 
 Úkol:
-1. Doplňte správně hodnoty uvedených konstant.
+1.x Doplňte správně hodnoty uvedených konstant. 
 2. Doplňte physics.py o několik výpočtových funkcí (opatřené docstrings), v nichž využijete minimálně všechny výše uvedené konstanty.
 Samozřejmě můžete své řešení rozšířit i o jiné fyzikální konstanty.
 3. Vytvořte z tohoto souboru samostatný modul v Pythonu podle návodu, který si sami najdete na internetu.      

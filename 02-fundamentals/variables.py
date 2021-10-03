@@ -75,7 +75,7 @@ hexadecimal = 0x12c #Hexadecimal Literal
 # & | ^ ~ << >>
 #? Do proměnné myself_binary uložte binární číslo vytvořené na základě osmi prvních znaků z vašeho jména a příjmení (souhláska = 1, samohláska 0)
 #? Příklad - HildaDok: 10110101
-myself_binary = 0b10101
+myself_binary = 0b10101101
 #? Vypište toto binární číslo v desítkové soustavě
 print(int(myself_binary))
 #? Pro toto binární číslo proveďte nejprve bitový posun o 2 bity vpravo, poté vypište výsledek v desítkové soustavě
