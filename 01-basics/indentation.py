@@ -49,17 +49,10 @@ Vytvořte libovolně pojmenovanou vlastní funkci s minimálně jedním parametr
 aspoň jednu podmínku if a funkci print(). Dodržte správné odsazování kódu a opatřete funkci stručnou dokumentací.
 Do konzole vypište nejprve docstring vaší funkce a potom zavolejte funkci samotnou.   
 """
-def lolko(lolecko):
-
-    uprimnost = input("Pokud mas rad lolecko zmackni 1 pokud ne, pouzij 0")
-    if int(uprimnost) > 0:
-        print(uprimnost+" ? Lhari ! nikdo nema rad "+lolecko+" !")
-    else:
-        print(uprimnost+" ? Lhari ! Kazdy ma rad "+lolecko+" !")
-    for i in range(0, 1):
+print("\n2)")
+print("Mala nasobilka cisla 3")
+for i in range(1, 31):
+    if i % 3 == 0:
         print(i)
-        if i == 0:
-            print('kecko')
-        else:
-            print('a tomu mam verit ?')
-lolko('lolecko')
+    else:
+        continue

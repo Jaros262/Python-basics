@@ -75,3 +75,39 @@ Použijte vhodné moduly v Pythonu (včetně jejich případné instalace) k tom
 K řešení prvního úkolu je možné doporučit importovat interní modul datetime
 Řešení dalších dvou úkolů můžete odvodit z příkladů v dokumentaci k externímu modulu dateutil - viz https://pypi.org/project/python-dateutil/
 """
+
+"""
+1)
+"""
+print("\n1)")
+
+import datetime
+
+today = datetime.datetime.now()
+date_time = today.strftime("%d/%m/%Y, %H:%M:%S")
+print("datum a cas:",date_time)
+
+"""
+2)
+"""
+print("\n2)")
+
+from dateutil.easter import *
+for i in range (2022,2027):
+    velikonoce = easter(i)
+    edit = velikonoce.strftime("%A - %d/%m/%Y")
+    print(edit)
+
+"""
+3)
+"""
+print("\n3)")
+
+for i in range (0, 50):
+    vanoce = datetime.date(today.year + i, 12,24)
+    editVanoce = vanoce.strftime("%A - %d/%m/%Y")
+    if (editVanoce.find('Sunday')!= -1):
+        print(editVanoce)
+        break
+    else:
+        continue
