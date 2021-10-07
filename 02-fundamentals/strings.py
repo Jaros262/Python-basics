@@ -152,11 +152,13 @@ funkční kód, tím lepší).
 1. Převeďte "česky" zadané datum - např. 12. 10. 2020 - do podoby "databázové" podoby - např. 2020-10-12
 '''
 import datetime
-puvodni = 12,10,2020
+puvodni = '12. 10. 2020'
 
+print(''
+      '{}-{}-{}'.format(puvodni[7:], puvodni[4:6], puvodni[:2]))
+'''
 datum = datetime.date(puvodni[3],puvodni[2],puvodni[1])
-
-print(datum)
+'''
 '''
 2. Vytvořte funkci, která vyrobí ze zadaného sousloví:
    a) identifikátor pro proměnné používané v Pythonu - např. To je proměnná v Pythonu = to_je_promenna_v_pythonu
