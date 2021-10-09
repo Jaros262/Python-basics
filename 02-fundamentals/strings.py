@@ -154,8 +154,12 @@ funkční kód, tím lepší).
 import datetime
 puvodni = '12. 10. 2020'
 
-print(''
-      '{}-{}-{}'.format(puvodni[7:], puvodni[4:6], puvodni[:2]))
+print('{}-{}-{}'.format(puvodni[7:], puvodni[4:6], puvodni[:2]))
+
+uprava = puvodni.split()
+print(uprava)
+uprava.sort(reverse=True)
+print(uprava)
 '''
 datum = datetime.date(puvodni[3],puvodni[2],puvodni[1])
 '''
