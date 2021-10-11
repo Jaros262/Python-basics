@@ -151,16 +151,17 @@ funkční kód, tím lepší).
 
 1. Převeďte "česky" zadané datum - např. 12. 10. 2020 - do podoby "databázové" podoby - např. 2020-10-12
 '''
-import datetime
+print("1)")
 puvodni = '12. 10. 2020'
 
 print('{}-{}-{}'.format(puvodni[7:], puvodni[4:6], puvodni[:2]))
-
+'''
+import datetime
 uprava = puvodni.split()
 print(uprava)
 uprava.sort(reverse=True)
 print(uprava)
-'''
+
 datum = datetime.date(puvodni[3],puvodni[2],puvodni[1])
 '''
 '''
@@ -168,7 +169,36 @@ datum = datetime.date(puvodni[3],puvodni[2],puvodni[1])
    a) identifikátor pro proměnné používané v Pythonu - např. To je proměnná v Pythonu = to_je_promenna_v_pythonu
    b) identifikátor pro camel syntax v JS - např. To je proměnná v Pythonu = toJePromennaVPythonu 
    Obě možnosti by měly být vyřešeny v jedné funkci s využitím parametrů.
-   Kdo si chce úkol trochu zjednodušit, nemusí řešit znaky s českou diakritikou. 
+   Kdo si chce úkol trochu zjednodušit, nemusí řešit znaky s českou diakritikou.
+'''
+print("\n2)")
+import string
+string_ = input("Zadej string ktery chcete rozdelit: ")
+string_upercase = string_
+string_upercase = string.capwords(string_, sep = None)
+string_ = string_.replace(' ', '_')
+string_upercase = string_upercase.replace(string_upercase[:1],string_upercase[:1].lower())
+string_upercase = string_upercase.replace(' ', '')
+
+print('a) Rozdeleni zadaneho stringu znakem \'_\': ',string_)
+print('a) Spojeni zadaneho stringu a pouziti upercase po mezere: ',string_upercase)
+
+''' 
 3. Vytvořte funkci, která vygeneruje náhodná hesla pro počet osob zadaný v parametru tak, aby heslo začínalo
    3 velkými písmeny, pokračovalo 3 malými písmeny, jedním speciálním znakem (-/+*) a končilo 3 náhodnými číslicemi.
 '''
+print("\n3)")
+import random
+import string
+znak = '-/+*'
+pocet = int(input("Zadejte pro kolik osob chcete generovat heslo:"))
+def get_random_password():
+    password = (random.choice(string.ascii_uppercase)) + (random.choice(string.ascii_uppercase)) + (random.choice(string.ascii_uppercase))
+    password += random.choice(string.ascii_lowercase) + random.choice(string.ascii_lowercase) + random.choice(string.ascii_lowercase)
+    password += random.choice(znak)
+    password += random.choice(string.digits) + random.choice(string.digits) + random.choice(string.digits)
+
+    return password
+for i in range(0, pocet):
+    if (pocet>= 1):
+        print(f"Osoba cislo {i+1}: {get_random_password()}")
